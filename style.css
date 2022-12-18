@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca:wght@400&display=swap');
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+body {
+    font-size: 15px;
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(233, 47%, 7%);
+}
+
+/* Typography */
+
+h1 {
+    font-family: 'Inter';
+}
+h2 {
+
+}
+p {
+
+}
+span {
+    font-family: 'Inter';
+    color: hsl(277, 64%, 61%);
+}
