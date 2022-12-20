@@ -12,14 +12,17 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {display: none;}
   </style>
 </head>
 <body>
-  <main class="container">
-    <div class="img-preview">
-      <img src="images/image-header-mobile.jpg" alt="learning business" />
+  <main class="container" >
+    <div class="img-preview col col-1">
+      <div class="color-overlay"></div>
+      <img id="mobile-img" src="images/image-header-mobile.jpg" alt="learning business" />
+      <img id="desktop-img" src="images/image-header-desktop.jpg" alt="learning business" />
     </div>
-    <div class="details">
+    <div class="details col col-2">
       <h1>Get <span>insights</span> that help your business grow.</h1>
       <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer 
         experience, and overall efficiency.</p>

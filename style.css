@@ -2,26 +2,151 @@
 *::after,
 *::before {
     box-sizing: border-box;
+    margin: 0;
 }
 body {
     font-size: 15px;
     width: 100%;
     height: 100vh;
     background-color: hsl(233, 47%, 7%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter';
 }
 
 /* Typography */
 
 h1 {
-    font-family: 'Inter';
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 0;
+    
 }
 h2 {
-
+    font-size: 1.3rem;
+    margin-bottom: 0;
+    text-transform: uppercase;
 }
 p {
-
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 0.9rem;
+    text-align: center;
+    
+}
+.reviews p {
+    font-weight: 400;
+    font-size: smaller;
+    margin: 8px;
+    text-transform: uppercase;
 }
 span {
-    font-family: 'Inter';
     color: hsl(277, 64%, 61%);
+}
+@media (min-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    h1, h2, p {
+        text-align: left;
+    }
+    p {
+        font-size: 1.1rem;
+        width: 90%;
+    }
+    .reviews p {
+        font-size: 1rem;
+        margin-left: 0;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/*layout*/
+
+main {
+    margin: 4em 2em;
+    background-color:  hsl(244, 38%, 16%);
+    border-radius: 10px;
+}
+@media (min-width: 768px) {
+    main {
+        margin: 10em;
+        display: flex;
+    }
+}
+.details {
+    padding: 2em 1.2em;
+    color: hsl(0, 0%, 100%);
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        width: 40%;
+        padding: 3em;
+}
+}
+.img-preview {
+    width:100%;
+    position: relative;
+    border-radius: 10px  10px 0 0;
+}
+@media (min-width: 768px) {
+    .img-preview {
+        width: 50%;
+        order: 1;
+        border-radius: 0  10px 10px 0;
+    }
+}
+.color-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: hsl(277, 64%, 61%);
+    border-radius: 10px  10px 0 0;
+    opacity: 0.8;
+}
+@media (min-width: 768px) {
+    .color-overlay {
+        width: 100%;
+        border-radius: 0  10px 10px 0;
+    }
+}
+#desktop-img {
+    display: none;
+}
+#mobile-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px  10px 0 0;
+}
+@media (min-width: 768px) {
+    #mobile-img {
+        display: none;
+    }
+    #desktop-img {
+        width: 100%;
+        border-radius: 0  10px 10px 0;
+    }
+}
+
+.reviews {
+    justify-content: center;
+    margin-top: 2em;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .reviews {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        order: 0;
+    }
 }
