@@ -6,8 +6,7 @@
 }
 body {
     font-size: 15px;
-    width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: hsl(233, 47%, 7%);
     display: flex;
     flex-direction: column;
@@ -25,18 +24,24 @@ h1 {
     margin-top: 0;
     
 }
-h2 {
+li {
+    list-style-type: none;
+}
+li .reviews-num{
     font-size: 1.3rem;
     margin-bottom: 0;
     text-transform: uppercase;
+    font-weight: 700;
 }
-p {
-    color: hsla(0, 0%, 100%, 0.75);
+.details-p {
     font-size: 0.9rem;
-    text-align: center;
-    
 }
-.reviews p {
+.reviews-details, .details-p{
+    color: hsla(0, 0%, 100%, 0.75);
+    text-align: center;
+    list-style-type: none;
+}
+.reviews-details {
     font-weight: 400;
     font-size: smaller;
     margin: 8px;
@@ -49,26 +54,26 @@ span {
     h1 {
         font-size: 2.5rem;
     }
-    h1, h2, p {
+    h1, .reviews-num, .reviews-details, .details-p {
         text-align: center;
     }
-    p {
+    .details-p {
         font-size: 1.1rem;
         width: 90%;
     }
-    .reviews p {
+    .reviews-details {
         font-size: 1rem;
         margin-left: 0;
     }
-    h2 {
+    li .reviews-num {
         font-size: 1.5rem;
     }
 }
 @media (min-width: 1440px) {
-    h1, h2, p {
+    h1, li .reviews-num, .details-p {
         text-align: left;
     }
-    p {
+    .details-p {
         width: 100%;
     }
 }
@@ -120,36 +125,27 @@ main {
         padding: 3em;
 }
 }
-.img-preview #mobile-img {
+picture {
+    position: relative;
+}
+img {
     width: 100%;
     height: auto;
-    display: block;
     object-fit: cover;
+    opacity: 0.8;
+    mix-blend-mode:luminosity;
+    display: block;
     border-radius: 10px  10px 0 0;
-}
-.img-preview #desktop-img {
-    display: none;
-}
-.img-preview  {
-    width:100%;
-    position: relative;
-    border-radius: 10px  10px 0 0;
-}
+}  
+
 @media (min-width: 1440px) {
-    .img-preview {
+    picture {
         width: 50%;
         order: 1;
         border-radius: 0  10px 10px 0;
     }
 }
-.color-overlay {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: hsl(277, 64%, 61%);
-    border-radius: 10px  10px 0 0;
-    opacity: 0.8;
-}
+
 @media (min-width: 1440px) {
     .color-overlay {
         width: 100%;
@@ -158,18 +154,19 @@ main {
 }
 
 @media (min-width: 1440px) {
-    .img-preview #mobile-img {
+    picture img {
     border-radius: 0  10px 10px 0;
     }
 }
 
-.reviews {
+ul {
+    padding-left: 0;
     justify-content: center;
     margin-top: 2em;
     text-align: center;
 }
 @media (min-width: 1440px) {
-    .reviews {
+    ul {
         width: 90%;
         display: flex;
         justify-content: space-between;

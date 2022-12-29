@@ -17,29 +17,29 @@
 </head>
 <body>
   <main class="container" >
-    <div class="img-preview col col-1">
-      <div class="color-overlay"></div>
-      <img id="mobile-img" src="images/image-header-mobile.jpg" alt="learning business" />
-      <img id="desktop-img" src="images/image-header-desktop.jpg" alt="learning business" />
-    </div>
+    <picture class="">
+      <source srcset="images/image-header-mobile.jpg"
+      media="(max-width: 1050px)" />
+      <img srcset="images/image-header-desktop.jpg" alt="learnings" />
+    </picture>
     <div class="details col col-2">
       <h1>Get <span>insights</span> that help your business grow.</h1>
-      <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+      <p class="details-p">Discover the benefits of data analytics and make better decisions regarding revenue, customer 
         experience, and overall efficiency.</p>
-      <div class="reviews">
-        <div class="company">
-          <h2>10k+</h2>
-          <p>companies</p>
-        </div>
-        <div class="template">
-          <h2>314</h2>
-          <p>templates</p>
-        </div>
-        <div class="queries">
-          <h2>12m+</h2>
-          <p>queries</p>
-        </div>
-      </div>
+      <ul class="reviews">
+        <li class="company">
+          <p class="reviews-num">10k+</p>
+          <p class="reviews-details">companies</p>
+        </li>
+        <li class="template">
+          <p class="reviews-num">314</p>
+          <p class="reviews-details">templates</p>
+        </li>
+        <li class="queries">
+          <p class="reviews-num">12m+</p>
+          <p class="reviews-details">queries</p>
+        </li>
+      </ul>
     </div>
   </main>
   <div class="attribution">
